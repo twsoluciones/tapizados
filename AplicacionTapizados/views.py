@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def Vlogin (request): # template
     return render(request, "Maqueta/login.html")
+
+def VloginAdmin (request): # template
+    return render(request, "Maqueta/loginAdmin.html")

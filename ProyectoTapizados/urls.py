@@ -21,4 +21,5 @@ from AplicacionTapizados import views
 urlpatterns = [
     #path('admin/', admin.site.urls)
     path('', views.Vlogin , name='inicio'),
+    path('AdminLog', views.VloginAdmin, name="loginAd")
 ]
