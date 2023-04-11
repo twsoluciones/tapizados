@@ -19,6 +19,6 @@ from django.urls import path
 from AplicacionTapizados import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('usuario/', views.Vlogin),
+    #path('admin/', admin.site.urls)
+    path('', views.Vlogin , name='inicio'),
 ]
