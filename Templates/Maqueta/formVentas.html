@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/formVentas.css' %}">
+    <title>Document</title>
+</head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <body  ng-controller="myCtrl">
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Cotizacion</h3>
+      </div>
+  
+  
+      <div class="panel-body">
+  
+        <form>
+  
+          <div class="row">
+  
+            <div class="col-md-12">
+              <h3>Datos Del Cliente</h3>
+            </div>
+  <!-- Modificar Modelos -->
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Nombre" ng-model="pessoa.nome"/>
+            </div>
+  
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Apellido" ng-model="pessoa.sobrenome"/>
+            </div>
+            
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Rut" ng-model="pessoa.sobrenome"/>
+            </div>
+  
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="E-mail" ng-model="pessoa.email"/>
+            </div>
+  
+            <div class="form-group col-md-4" >
+              <input type="text" class="form-control" placeholder="Telefono" ng-model="pessoa.telefone"/>
+            </div>
+  
+            <div class="col-md-12">
+              <h3>Direccion </h3>
+            </div>
+  
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Calle/Av" ng-model="pessoa.endereco.rua"/>
+            </div>
+  
+            <div class="form-group col-md-2">
+              <input type="text" class="form-control" placeholder="Numero" ng-model="pessoa.endereco.numero"/>
+            </div>
+  
+            <div class="form-group col-md-3">
+              <input type="text" class="form-control" placeholder="Comuna" ng-model="pessoa.endereco.complemento"/>
+            </div>
+  
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Villa" ng-model="pessoa.endereco.bairro"/>
+            </div>
+  
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Ciudad" ng-model="pessoa.endereco.cidade"/>
+            </div>
+  
+            <div class="col-md-12">
+              <h3>Datos Del Producto</h3>
+            </div>
+  
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.nome">
+                <option value="" >Tipo de Producto</option>
+                <option value="0">Sofa</option>
+                <option value="1">Sillon</option>
+                <option value="2">Sitial</option>
+                <option value="3">Living</option>
+                <option value="4">Sillas</option>
+                <option value="5">Mesa</option>
+              </select>
+            </div>
+  
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Nombre de la Tela</option>
+                <option value="1">Lino</option>
+                <option value="2">Brocato</option>
+                <option value="3">Felpa</option>
+                <option value="4">Chenille</option>
+                <option value="5">Cuero Sintetico</option>
+                <option value="6">Ecocuero</option>
+                <option value="7">PU</option>
+                <option value="8">Cuero Natural</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Color</option>
+                <!-- Convertir en input -->
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Cantidad De Tela</option>
+                <!-- Crear Calculo -->
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Relleno Nuevo</option>
+                <option value="1">Si</option>
+                <option value="2">No</option>
+
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Tipo De Relleno</option>
+                <option value="1">Bloques De Espuma</option>
+                <option value="2">Pluma</option>
+                <option value="3">Espuma Molida</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Cojines de respaldo</option>
+                <!-- Convertir en input -->
+              </select>
+            </div>
+            
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Cojines de Asiento</option>
+                <!-- Convertir en input -->
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <select class="form-control" ng-model="pessoa.curso.periodo">
+                <option value="" >Foto</option>
+                <!-- Convertir en input de carga de imagen -->
+              </select>
+            </div>
+          </form>
+  
+        </div>
+  
+      </div>
+      <div class="row">
+  
+        <div class="form-group col-md-1">
+          <button type="button" class="btn btn-success form-control" ng-click=salvar()>Salvar</button>
+        </div>
+        <div class="form-group col-md-1">
+          <button type="button" class="btn btn-warning form-control" ng-click=limpar()>Limpar</button>
+        </div>
+        <div class="form-group col-md-1">
+          <button type="button" class="btn btn-danger form-control" href="home.html">Cancelar</button>
+        </div>
+  
+      </div>
+  
+      <form>
+  
+        <div class="row">
+  
+          <div class="form-group col-md-12">
+            <input type="text" class="form-control" placeholder="Pesquisar" ng-model="pesquisa"/>
+          </div>
+  
+          <div class="table-responsive col-md-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>E-Mail</th>
+                  <th>Telefono</th>
+                  <th>Producto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Modificar Junto AL modelo -->
+                <tr ng-repeat="pessoa in cadastradas">
+                  <td>{{pessoa.nome}}</td>
+                  <td>{{pessoa.email}}</td>
+                  <td>{{pessoa.telefone}}</td>
+               </tr>
+              </tbody>
+            </table>
+  
+          </div>
+        </div>
+      </form>
+  
+    </div>
+  </body>
+
+</html>

@@ -8,3 +8,6 @@ def Vlogin (request): # template
 
 def VloginAdmin (request): # template
     return render(request, "Maqueta/loginAdmin.html")
+
+def VistaUsuario (request): # template
+    return render(request, "Maqueta/formVentas.html")
