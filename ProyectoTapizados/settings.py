@@ -84,6 +84,7 @@ DATABASES = {
         'NAME': 'Tapizados',
         'USER':'root',
         'PASSWORD':'Wizard2023.'
+       
     }
 }
 
