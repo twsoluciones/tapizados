@@ -83,9 +83,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Tapizados',
         'USER':'root',
-        'PASSWORD':'123456'
+        'PASSWORD':'Wizard2023.'
     }
 }
+
 
 
 # Password validation

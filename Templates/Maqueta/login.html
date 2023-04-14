@@ -11,22 +11,17 @@
 <body>
     <div class="login-box">
         <h2>Acceso</h2>
-        <form >
+        <form method="POST" action="{% url 'login' %}">
+          {% csrf_token %}
           <div class="user-box">
-            <input type="text" name=""  required>
+            <input type="text" name="username"  required>
             <label>Nombre De Usuario</label>
           </div>
           <div class="user-box">
-            <input type="password" name=""  required>
+            <input type="password" name="password"  required>
             <label>Contraseña</label>
           </div>
-          <a href="{% url 'ViUsu' %}">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Entrar
-          </a>
+          <button type="submit">Entrar</button>
           <a href="{% url 'loginAd' %}" class="radio">
             <span></span>
             <span></span>
