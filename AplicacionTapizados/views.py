@@ -56,3 +56,6 @@ def login_view(request):
             return render(request, 'Maqueta/login.html', {'error_message': error_message})
     else:
         return render(request, 'Maqueta/formVentas.html')
+
+def VistaAdmin (request): # template
+    return render(request, "Maqueta/Vista1Admin.html")    

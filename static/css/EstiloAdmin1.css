@@ -1,0 +1,22 @@
+input,
+select {
+  /* Remover Bordas das caixas de texto*/
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  box-shadow: 0 0 0 0 !important;
+
+  border-radius: 0 !important;
+}
+
+#btn-guardar{
+  background-color: rgba(4, 105, 100, 0.4);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+#btn-guardar:hover{
+  box-shadow: 0 0 6px 0 rgba(2, 163, 88, 0.5);
+  transform: scale(1.03);
+  cursor: pointer;
+}
