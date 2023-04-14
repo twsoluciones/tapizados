@@ -11,3 +11,6 @@ def VloginAdmin (request): # template
 
 def VistaUsuario (request): # template
     return render(request, "Maqueta/formVentas.html")
+
+def RegistroUsuario (request):
+    return render(request, "Maqueta/RegistroUsuario.html")
