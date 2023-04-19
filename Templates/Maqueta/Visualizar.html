@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/Visualizar.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Cotizacion</title>
+</head>
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading" id="panel">
+          <div class="left">
+            <h3 class="panel-title">Administrador</h3>
+          </div>
+          <div class="right">
+            <a class="volver" href="{% url 'Dsh' %}" id="letter">Panel</a>
+          </div>
+        </div>
+      </div>
+    <!-- <h1>Aqui se deberia mostrar la previsualizacion completa del item seleccionado previamente</h1> -->
+<head>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 99%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+		}
+
+		th, td {
+			text-align: center;
+			border: 1px solid black;
+			padding: 8px;
+		}
+
+		th {
+			background-color: #dddddd;
+		}
+
+		.img-cell {
+			padding: 0;
+		}
+
+		.img-cell img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th colspan="8">Mueble Para Hogar SPA</td>
+		</tr>
+		<tr>
+            <td colspan="2">Atencion</td>
+			<td colspan="2">Elianay Avendaño</td>
+			<td colspan="2"> Elianay Avendaño</td>
+            <td colspan="1"> 9-40023457</td>
+		</tr>
+		<tr>
+			<th>Cliente</th>
+			<th>Rut</th>
+			<th>Contacto</th>
+			<th>Direccion</th>
+			<th>Fecha de Retiro</th>
+			<th>Fecha De Entrega</th>
+			<!-- La celda vacía en el medio es para el espacio entre "Fecha de Retiro" y "Fecha de Entrega" -->
+			<th>Cond-Venta</th>
+		</tr>
+        <!-- Aqui se llaman los datos desde la BD -->
+		<tr>
+			<td>Carolanne Jara</td>
+			<td>18.666.999-2</td>
+			<td>+569 3654 7894</td>
+			<td>Las Manzanas #2101, Santiago</td>
+			<td>18/04/2023</td>
+			<td>01/05/2023</td>
+			<td>Efectivo</td>
+		</tr>
+		<tr>
+			<td colspan="2">Descripción</td>
+			<td colspan="5" class="img-cell"><img src="/static/images/sillon.jpg" alt="Imagen del mueble"></td>
+		</tr>
+        <!-- Detalle -->
+        <tr>
+            <th colspan="9">Detalle</td>
+            <!-- <td colspan="7"></td> -->
+        </tr>
+        <!-- Desglose -->
+		<tr>
+			<td colspan="2">¿Que Hacer?</td>
+			<!-- Aqui traer los datos desde la BD -->
+			<td colspan="7">Retapizado de 1 sofa en ecocuero con sus costuras Originales y mismos Rellenos - terminaciones de primer nivel</td>
+		</tr>
+		<tr>
+			<td colspan="2">Retiro/entrega</td>
+			<!-- Aqui traer los datos desde la BD -->
+			<td colspan="7">Retiro y entrega desde domicilio</td>
+		</tr>
+		<tr>
+			<td colspan="2">Notas</td>
+			<!-- Aqui traer los datos desde la BD -->
+			<td colspan="7">Revisar El producto una vez recivido </td>
+		</tr>
+		<tr>
+			<td colspan="2">Garantia</td>
+			<!-- Aqui traer los datos desde la BD -->
+			<td colspan="7">1 Año</td>
+		</tr>
+		<tr>
+			<th colspan="7">Datos de Sucursal</td>
+		</tr>
+		<tr>
+			<td colspan="2">MueblesParaHogar SPA</td>
+			<td colspan="2">77.336.477-k</td>
+			<td colspan="2">Rogelio Ugarte 1344 Santago Centro</td>
+			<td colspan="2">+569 6370 7388</td>
+		</tr>
+		<tr>
+			<th colspan="7">Datos de Pago</td>
+		</tr>
+		<tr>
+			<th colspan="2">Total Neto</td>
+			<th colspan="2">Abono</td>
+			<th colspan="3">Saldo</td>
+		</tr>
+		<tr>
+			<td colspan="2">$250.000</td>
+			<td colspan="2">$125.000</td>
+			<td colspan="3">$125.000</td>
+		</tr>
+	</table>
+
+</body>
+</html>

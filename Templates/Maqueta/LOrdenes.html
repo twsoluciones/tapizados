@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/LOrdenes.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Listado</title>
+</head>
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading" id="panel">
+          <div class="left">
+            <h3 class="panel-title">Administrador</h3>
+          </div>
+          <div class="right">
+            <a class="volver" href="{% url 'Dsh' %}" id="letter">Panel</a>
+          </div>
+        </div>
+      </div>
+
+    <h1>Aqui ira la tabla de ordenes de venta</h1>
+    <h1>dentro de la tabla que se desplege aqui al final</h1>
+    <h1>tendremos un boton , que dira "Visualizar o ver"</h1>
+    <button><a href="{% url 'Vizar' %}">Visualizar</a></button>
+</body>
+</html>

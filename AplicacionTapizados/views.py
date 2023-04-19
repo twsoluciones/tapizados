@@ -58,4 +58,19 @@ def login_view(request):
         return render(request, 'Maqueta/formVentas.html')
 
 def VistaAdmin (request): # template
-    return render(request, "Maqueta/Vista1Admin.html")    
+    return render(request, "Maqueta/rUsuario.html")
+
+def Visualizar (request): # template
+    return render(request, "Maqueta/Visualizar.html")
+
+def Dash (request): # template
+    return render(request, "Maqueta/dash.html")
+
+def rUsuario (request): # template
+    return render(request, "Maqueta/rUsuario.html")
+
+def PVend (request): # template
+    return render(request, "Maqueta/PVendedores.html")
+
+def LOrdenes (request): # template
+    return render(request, "Maqueta/LOrdenes.html")
