@@ -26,7 +26,12 @@ urlpatterns = [
     path('RegistroU', views.RegistroUsuario, name="RUsuario"),
     path('registrar_usuario/', views.registrar_usuario, name='registrar_usuario'),
     path('login/', views.login_view, name='login'),
-    path('VAdmin', views.VistaAdmin, name="ViAdm"),
+    path('VAdmin', views.rUsuario, name="ViAdm"),
+    path('Viszar', views.Visualizar, name="Vizar"),
+    path('Dash', views.Dash, name="Dsh"),
+    path('RUsu', views.rUsuario, name="Rusu"),
+    path('Pven', views.PVend, name="Pvend"),
+    path('Lorde', views.LOrdenes, name="LOrde"),
 ]
 
     

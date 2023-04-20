@@ -20,3 +20,19 @@ select {
   transform: scale(1.03);
   cursor: pointer;
 }
+#panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#letter{
+    color: white;
+}
+.left {
+    margin-right: auto;
+}
+  
+.right {
+    margin-left: auto;
+}
