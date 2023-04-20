@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 import mysql.connector
+from django.contrib.auth.hashers import make_password
+from django.contrib import messages
+import bcrypt
+from .models import Usuario
 
 
 # Create your views here.
@@ -30,7 +34,7 @@ def registrar_usuario(request):
 
         # Insertar los datos del usuario en la tabla correspondiente
         consulta = "INSERT INTO aplicaciontapizados_usuario (Usuario, Clave) VALUES (%s, %s)"
-        valores = (nombre, contrasena)
+        valores = (nombre, make_password(contrasena))
         cursor.execute(consulta, valores)
 
         # Guardar los cambios y cerrar la conexión
@@ -38,6 +42,7 @@ def registrar_usuario(request):
         conexion.close()
 
         # Redireccionar al usuario a otra página
+        messages.success(request, 'Usuario registrado correctamente.')
         return render(request, 'Maqueta/formVentas.html')
     else:
         # Si el método de solicitud no es POST, mostrar el formulario
@@ -46,16 +51,20 @@ def registrar_usuario(request):
 def login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('bienvenida')
+        password = request.POST['password'].encode('utf-8')
+        try:
+            user = Usuario.objects.get(Usuario=username)
+        except Usuario.DoesNotExist:
+            messages.error(request, 'El usuario no existe')
+            return redirect('login')
+        if bcrypt.checkpw(password, user.Clave.encode('utf-8')):
+            request.session['user_id'] = user.id
+            messages.success(request, '¡Bienvenido de nuevo!')
+            return redirect('index')
         else:
-            error_message = 'El usuario o la contraseña son incorrectos.'
-            return render(request, 'Maqueta/login.html', {'error_message': error_message})
-    else:
-        return render(request, 'Maqueta/formVentas.html')
+            messages.error(request, 'Contraseña incorrecta')
+            return redirect('login')
+    return render(request, 'login.html')
 
 def VistaAdmin (request): # template
     return render(request, "Maqueta/rUsuario.html")

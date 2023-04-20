@@ -1,8 +1,17 @@
 from django.db import models
+import bcrypt
 
 class Usuario(models.Model):
     Usuario = models.CharField(max_length=30)
     Clave = models.CharField(max_length=30)
+
+    def verificar_contraseña(self, contraseña):
+        return bcrypt.checkpw(contraseña.encode('utf-8'), self.Contraseña.encode('utf-8'))
+
+ 
+
+    class Meta:
+        db_table = 'aplicaciontapizados_usuario'
 
 class Administrador(models.Model):
     Usuario = models.CharField(max_length=30)
