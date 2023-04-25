@@ -88,9 +88,13 @@ body {
   position: absolute;
   display: block;
 }
+.B-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 .radio{
-    display: flex;
-    margin: 0px 0px 0px 70px;
+  margin: 0px 0px 0px 30px;
 }
 .login-box a span:nth-child(1) {
   top: 0;
