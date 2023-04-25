@@ -22,6 +22,36 @@
         </div>
       </div>
 
+      <div class="table-responsive col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Codigo venta</th>
+              <th>Vendedor</th>
+              <th>Detalle</th>
+              <th>Cliente</th>
+              <th>Fecha de Retiro</th>
+              <th>Fecha de Entrega</th>
+              <th>Direccion</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Modificar Junto AL modelo -->
+            <tr ng-repeat="pessoa in cadastradas">
+              <td>{{pessoa.CodVenta}}</td>
+              <td>{{pessoa.Vendedor}}</td>
+              <td>{{pessoa.Detalle}}</td>
+              <td>{{pessoa.fechaR}}</td>
+              <td>{{pessoa.fechaE}}</td>
+              <td>{{pessoa.Direccion}}</td>
+              <td>{{pessoa.Total}}</td>
+           </tr>
+          </tbody>
+        </table>
+
+      </div>
+
     <h1>Aqui ira la tabla de ordenes de venta</h1>
     <h1>dentro de la tabla que se desplege aqui al final</h1>
     <h1>tendremos un boton , que dira "Visualizar o ver"</h1>

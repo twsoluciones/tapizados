@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Tapizados',
         'USER':'root',
-        'PASSWORD':'123456'
+        'PASSWORD':'Cloud@184889137'
     }
 }
 
