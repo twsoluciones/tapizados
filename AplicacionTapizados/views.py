@@ -29,7 +29,7 @@ def registrar_usuario(request):
         contrasena = request.POST['contrasena']
 
         # Conectar con la base de datos
-        conexion = mysql.connector.connect(user='root', password='Wizard2023.', database='tapizados')
+        conexion = mysql.connector.connect(user='root', password='123456', database='tapizados')
         cursor = conexion.cursor()
 
         # Insertar los datos del usuario en la tabla correspondiente
