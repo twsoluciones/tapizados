@@ -9,13 +9,21 @@
     <title>Login Admin</title>
 </head>
 <body>
-    <form class="login">
-        <input type="text" placeholder="Nombre De Usuario">
-        <input type="password" placeholder="Contraseña">
+    <form class="login" method="POST" action="{% url 'login_admin'%}">
+        {% csrf_token %}
+        <input type="text" placeholder="Nombre De Usuario" name="username">
+        <input type="password" placeholder="Contraseña" name="password">
         <button>Entrar</button>
         <a href="{% url 'ViAdm' %}" target="_blank">Ingresar vendedor</a>
-
-      </form>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </form>
+      
       
       <a href="{% url 'inicio' %}" target="_blank">Volver Al Menu Usuario</a>
 </body>

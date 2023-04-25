@@ -4,8 +4,27 @@ from django.contrib.auth import authenticate, login
 import mysql.connector
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 import bcrypt
 from .models import Usuario
+
+def login_admin(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        #Autenticar al usuario
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('dashboard')
+        else:
+            messages.error(request, 'Usuario o contraseña incorrectos.')
+    return render(request, 'Maqueta/loginAdmin.html')
+
+@login_required
+def dashboard(request):
+    return render(request, 'Maqueta/dash.html')
+    
 
 
 # Create your views here.

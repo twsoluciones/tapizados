@@ -32,7 +32,8 @@ urlpatterns = [
     path('RUsu', views.rUsuario, name="Rusu"),
     path('Pven', views.PVend, name="Pvend"),
     path('Lorde', views.LOrdenes, name="LOrde"),
-    
+    path('loginad/', views.login_admin, name='login_admin'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 ]
 
     
