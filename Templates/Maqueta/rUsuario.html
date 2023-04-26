@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css%22%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css%22%3E">
+    <script>src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js%22%3E"</script>
+    <script> src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js%22%3E"</script>
+    <script> src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js%22%3E"</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="{% static './css/rUsuario.css' %}">
     <title>Document</title>
 </head>
@@ -34,11 +41,7 @@
             </div>
   <!-- Modificar Modelos -->
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" placeholder="Nombre" ng-model="pessoa.nome"/>
-            </div>
-  
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" placeholder="Apellido" ng-model="pessoa.sobrenome"/>
+              <input type="text" class="form-control" placeholder="Nombre completo" ng-model="pessoa.nome"/>
             </div>
             
             <div class="form-group col-md-4">
@@ -52,6 +55,11 @@
             <div class="form-group col-md-4" >
               <input type="text" class="form-control" placeholder="Telefono" ng-model="pessoa.telefone"/>
             </div>
+
+            <div class="form-group col-md-4">
+              <input type="date" class="form-control" id="fecha" ng-model="pessoa.data"/>
+            </div>
+
   
             <div class="col-md-12">
               <h3>Direccion </h3>
@@ -103,7 +111,6 @@
               <thead>
                 <tr>
                   <th>Nombre</th>
-                  <th>Apellido</th>
                   <th>E-Mail</th>
                   <th>Telefono</th>
                 </tr>
@@ -112,7 +119,6 @@
                 <!-- Modificar Junto AL modelo -->
                 <tr ng-repeat="pessoa in cadastradas">
                   <td>{{pessoa.nome}}</td>
-                  <td>{{pessoa.Apellido}}</td>
                   <td>{{pessoa.email}}</td>
                   <td>{{pessoa.telefone}}</td>
                </tr>
@@ -122,8 +128,13 @@
           </div>
         </div>
       </form>
+   </div>
+   <script>
+    $(function() {
+      $("#id_fecha").datepicker();
+    });
+  </script>
   
-    </div>
   </body>
 
 </html>
